@@ -1,0 +1,37 @@
+# Thư mục dependencies
+node_modules/
+
+# File biên dịch từ Pug (nếu bạn dùng build tool)
+dist/
+public/
+*.html
+
+# Cache và file tạm
+.cache/
+.temp/
+
+# File môi trường (chứa biến bí mật)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# File package lock (nếu dùng yarn)
+package-lock.json
+yarn.lock
+
+# File biên dịch CSS nếu dùng preprocessor (Sass/Less)
+*.css.map
