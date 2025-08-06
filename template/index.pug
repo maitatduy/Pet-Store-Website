@@ -10,3 +10,45 @@ html(lang="en")
         link(rel="stylesheet" href="./assets/css/style.css")
 
     body
+        // Header
+        header.header
+            .container
+                .header__wrap
+                    button.header__button-menu
+                        i.fa-solid.fa-bars
+
+                    .header__logo
+                        a(href="/")
+                            img(src="./assets/images/logo.png" class="inner-image" alt="Monitor")
+
+                    nav.header__menu
+                        ul.header__list
+                            li.header__item
+                                a(href="/" class="header__link") Home
+                            li.header__item
+                                a(href="#" class="header__link") Category
+                            li.header__item
+                                a(href="#" class="header__link") About
+                            li.header__item
+                                a(href="#" class="header__link") Contact
+
+                    form(action="" class="header__search")
+                        button
+                            i.fa-solid.fa-magnifying-glass
+                        label
+                            input(type="text")
+
+                    a(href="#" class="header__button") Join the community
+
+                    .header__language
+                        .header__logo-country
+                            i.fa-solid.fa-star
+                        .header__country VND
+
+                        i.fa-solid.fa-angle-down.header__icon--dropdown
+
+                    button.header__button-search
+                        i.fa-solid.fa-magnifying-glass
+
+
+
