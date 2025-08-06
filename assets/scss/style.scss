@@ -23,3 +23,140 @@
     padding-right: 16px;
   }
 }
+
+/* Header */
+.header {
+  padding: 30px 0;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo img {
+    width: auto;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__menu {
+    flex: 1;
+    margin-left: 48px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 48px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $dark-blue;
+    font-weight: bold;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    padding: 12px 79px 12px 16px;
+    border-radius: 46px;
+    background-color: $neutral-color-0;
+
+    button {
+      font-size: 20px;
+      color: $neutral-color-60;
+      margin-right: 12px;
+    }
+    input {
+      border: none;
+      font-size: 14px;
+      color: $neutral-color-40;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    background-color: $dark-blue;
+    padding: 14px 28px;
+    border-radius: 57px;
+    color: $neutral-color-0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 14px;
+
+    &-menu, &-search {
+      display: none;
+    }
+  }
+
+  &__language {
+    margin-left: 14px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-country {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #D80027;
+    margin-right: 6px;
+
+    i {
+      color: #FFDA44;
+      font-size: 8px;
+    }
+  }
+
+  &__country {
+    font-size: 16px;
+    color: $dark-blue-80;
+    margin-right: 4px;
+  }
+
+  &__icon--dropdown {
+    color: $dark-blue-80;
+  }
+
+  @media (max-width: 1199.98px) {
+    &__button, &__language {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    &__menu, &__search {
+      display: none;
+    }
+
+    &__button-menu, &__button-search {
+      display: block;
+      width: 32px;
+      height: 32px;
+      font-size: 24px;
+    }
+
+    &__wrap {
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    &__logo img {
+      height: 32px;
+    }
+  }
+}
