@@ -4,7 +4,6 @@ node_modules/
 # File biên dịch từ Pug (nếu bạn dùng build tool)
 dist/
 public/
-*.html
 
 # Cache và file tạm
 .cache/
