@@ -335,6 +335,14 @@
         }
       }
     }
+
+    @media (max-width: 374.98px) {
+      &__button {
+        &--left, &--right {
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
 
