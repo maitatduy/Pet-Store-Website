@@ -1,0 +1,100 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="stylesheet" href="./assets/css/style.css")
+
+        block title
+
+    body
+        // Header
+        header.header
+            .container
+                .header__wrap
+                    button.header__button-menu
+                        i.fa-solid.fa-bars
+
+                    .header__logo
+                        a(href="/")
+                            img(src="./assets/images/logo.png" class="inner-image" alt="Monitor")
+
+                    nav.header__menu
+                        ul.header__list
+                            li.header__item
+                                a(href="/" class="header__link") Home
+                            li.header__item
+                                a(href="#" class="header__link") Category
+                            li.header__item
+                                a(href="#" class="header__link") About
+                            li.header__item
+                                a(href="#" class="header__link") Contact
+
+                    form(action="" class="header__search")
+                        button
+                            i.fa-solid.fa-magnifying-glass
+                        label
+                            input(type="text" placeholder="Search something here!")
+
+                    a(href="#" class="header__button") Join the community
+
+                    .header__language
+                        .header__logo-country
+                            i.fa-solid.fa-star
+                        .header__country VND
+
+                        i.fa-solid.fa-angle-down.header__icon--dropdown
+
+                    button.header__button-search
+                        i.fa-solid.fa-magnifying-glass
+
+        block main
+
+        // Footer
+        footer.footer
+            .container
+                .footer__top
+                    h3.footer__title Register now so you don't miss our programs
+                    form(class="footer__form" action="#")
+                        input(type="email" placeholder="Enter your email...")
+                        button(type="submit") Subcribe Now
+                .footer__middle
+                    .footer__menu
+                        ul.footer__list
+                            li.footer__item
+                                a(href="/" class="footer__link") Home
+                            li.footer__item
+                                a(href="#" class="footer__link") Category
+                            li.footer__item
+                                a(href="#" class="footer__link") About
+                            li.footer__item
+                                a(href="#" class="footer__link") Contact
+                    .footer__social
+                        ul.footer__list
+                            li.footer__item
+                                a(href="/" class="footer__link")
+                                    i.fa-brands.fa-facebook
+                            li.footer__item
+                                a(href="#" class="footer__link")
+                                    i.fa-brands.fa-twitter
+                            li.footer__item
+                                a(href="#" class="footer__link")
+                                    i.fa-brands.fa-instagram
+                            li.footer__item
+                                a(href="#" class="footer__link")
+                                    i.fa-brands.fa-youtube
+                .footer__bottom
+                    .footer__copyright
+                        | © 2022 Monito. All rights reserved.
+                    .footer__logo
+                        a(href="/")
+                            img(src="./assets/images/logo.png" alt="Monitor")
+                    .footer__links
+                        ul.footer__list
+                            li.footer__item
+                                a(href="#" class="footer__link") Terms of Service
+                            li.footer__item
+                                a(href="#" class="footer__link") Privacy Policy
