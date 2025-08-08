@@ -1375,3 +1375,285 @@
     }
   }
 }
+
+/* Footer */
+.footer {
+  background: linear-gradient(103deg, #FCEED5 6.43%, #FCEED5 78.33%, #FFE7DA 104.24%);
+  border-radius: 40px 40px 0 0;
+  padding: 80px 0 40px 0;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $dark-blue;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    width: calc(40% - 20px);
+    color: #FDFDFD;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &__form {
+    flex: 1;
+    padding: 12px;
+    background-color: #FFFFFF;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      flex: 1;
+      padding: 14px 28px;
+      margin-right: 12px;
+      border-radius: 8px;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      border: 1px solid #CCD1D2;
+    }
+
+    button {
+      width: calc(30% - 20px);
+      padding: 12px 28px;
+      background-color: $dark-blue;
+      border-radius: 8px;
+      color: #FDFDFD;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        margin-right: 60px;
+
+        a {
+          font-size: 16px;
+          width: 100%;
+          color: #00171F;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__social {
+    margin-bottom: 60px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        margin-left: 40px;
+
+        a {
+          font-size: 24px;
+          width: 100%;
+          color: #00171F;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
+    color: #667479;
+    font-size: 14px;
+  }
+
+  &__menu {
+    img {
+      width: 100%;
+      aspect-ratio: 115/40;
+      object-fit: cover;
+    }
+  }
+
+  &__links {
+    ul {
+      padding: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        margin-left: 32px;
+
+        a {
+          font-size: 14px;
+          color: #667479;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    &__title {
+      font-size: 18px;
+    }
+
+    &__form {
+      button {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    &__top {
+      flex-direction: column;
+    }
+
+    &__title {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    &__form {
+      flex-direction: column;
+      width: 100%;
+
+      input {
+        margin-right: 0;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      button {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px 28px 10px 28px;
+      }
+    }
+
+    &__menu {
+      ul {
+        align-items: center;
+        height: 36px;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    &__middle {
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    &__menu {
+      ul {
+        li {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__social {
+      margin-bottom: 36px;
+
+      ul {
+        justify-content: center;
+
+        li {
+          text-align: center;
+          width: 20%;
+          margin-left: 0;
+        }
+      }
+    }
+    &__bottom {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__logo {
+      margin-bottom: 32px;
+    }
+
+    &__copyright {
+      margin-bottom: 8px;
+      order: 1;
+    }
+
+    &__links {
+      order: 1;
+      width: 50%;
+      ul {
+        li {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    & {
+      padding: 40px 0;
+    }
+
+    &__social {
+      margin-bottom: 35px;
+    }
+
+    &__links {
+      width: 100%;
+      ul {
+        justify-content: center;
+        gap: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 424.98px) {
+    &__menu {
+      ul {
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &__social {
+      margin-bottom: 25px;
+      ul {
+        li {
+          a {
+            i {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
