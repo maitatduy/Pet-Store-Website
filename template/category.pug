@@ -15,3 +15,182 @@ block main
                     a(href="#" class="breadcrumb__link") Small Dog
     // Hero pets section
     include partials/hero-pets.pug
+
+    // Pet products layout section
+    section.layout-products
+        .container
+            .layout-products__wrap
+                .layout-products__left
+                    .filter
+                        .filter__title
+                            span Filter
+                        .filter__list
+                            .filter__item
+                                .filter__item-title Gender
+                                .filter__item-box
+                                    .filter__item-choose
+                                        input(type="checkbox" name="gender" value="male" id="male")
+                                        label(for="male") Male
+                                    .filter__item-choose
+                                        input(type="checkbox" name="gender" value="male" id="female")
+                                        label(for="female") Female
+                            .filter__item
+                                .filter__item-title Color
+                                .filter__item-box
+                                    .filter__item-choose
+                                        input(type="checkbox" name="color" value="red" id="red")
+                                        span.filter__item-color.filter__item-color--red
+                                        label(for="red") Red
+                                    .filter__item-choose
+                                        input(type="checkbox" name="color" value="apricot" id="apricot")
+                                        span.filter__item-color.filter__item-color--apricot
+                                        label(for="apricot") Apricot
+                                    .filter__item-choose
+                                        input(type="checkbox" name="color" value="black" id="black")
+                                        span.filter__item-color.filter__item-color--black
+                                        label(for="black") Black
+                                    .filter__item-choose
+                                        input(type="checkbox" name="color" value="black-and-white" id="black-and-white")
+                                        span.filter__item-color.filter__item-color--black-and-white
+                                        label(for="black-and-white") Black & White
+                                    .filter__item-choose
+                                        input(type="checkbox" name="color" value="silver" id="silver")
+                                        span.filter__item-color.filter__item-color--silver
+                                        label(for="silver") Silver
+                                    .filter__item-choose
+                                        input(type="checkbox" name="color" value="tan" id="tan")
+                                        span.filter__item-color.filter__item-color--tan
+                                        label(for="tan") Tan
+                            .filter__item
+                                .filter__item-title Price
+                                .filter__item-box.filter__item-box--flex
+                                    .filter__item-select
+                                        select(id="min-price")
+                                            option(value="") Min
+                                            option(value="10.000.000") 10.000.000
+                                            option(value="20.000.000") 20.000.000
+                                            option(value="30.000.000") 30.000.000
+                                    .filter__item-select
+                                        select(id="max-price")
+                                            option(value="") Max
+                                            option(value="10.000.000") 10.000.000
+                                            option(value="20.000.000") 20.000.000
+                                            option(value="30.000.000") 30.000.000
+                            .filter__item
+                                .filter__item-title Breed
+                                .filter__item-box
+                                    .filter__item-choose
+                                        input(type="checkbox" name="breed" value="small" id="small")
+                                        label(for="small") Small
+                                    .filter__item-choose
+                                        input(type="checkbox" name="breed" value="medium" id="medium")
+                                        label(for="medium") Medium
+                                    .filter__item-choose
+                                        input(type="checkbox" name="breed" value="large" id="large")
+                                        label(for="large") Large
+                .layout-products__right
+                    // Pets showcase section
+                    section.pets-showcase.layout-products__right-list
+                        .pets-showcase__head
+                            .pets-showcase__content.layout-products__right-content
+                                h2.pets-showcase__title.layout-products__right-title Small Dog <span>52 puppies</span>
+                            a(href="#" class="pets-showcase__button layout-products__right-button")
+                                | Sort by: Popular
+                                i.fa-solid.fa-angle-down
+                            .layout-products__right-filter
+                                img(src="./assets/images/filter-icon.png" alt="filter icon")
+                                | Filter
+                        .pets-showcase__main.layout-products__right-main
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-1.png" alt="Pet 1")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO231 - Pomeranian White
+                                    .pets-showcase__description
+                                        p Gene: <span>Male</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 6.900.000 VND
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-2.jpg" alt="Pet 2")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO502 - Poodle Tiny Yellow
+                                    .pets-showcase__description
+                                        p Gene: <span>Female</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 3.900.000 VND
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-3.jpg" alt="Pet 3")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO102 - Poodle Tiny Sepia
+                                    .pets-showcase__description
+                                        p Gene: <span>Male</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 4.000.000 VND
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-4.jpg" alt="Pet 4")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO512 - Alaskan Malamute Grey
+                                    .pets-showcase__description
+                                        p Gene: <span>Male</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 8.900.000 VND
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-5.jpg" alt="Pet 5")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO231 - Pembroke Corgi Tricolor
+                                    .pets-showcase__description
+                                        p Gene: <span>Female</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 9.000.000 VND
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-6.jpg" alt="Pet 6")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO231 - Pomeranian White
+                                    .pets-showcase__description
+                                        p Gene: <span>Female</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 6.500.000 VND
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-7.jpg" alt="Pet 7")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO231 - Pomeranian White
+                                    .pets-showcase__description
+                                        p Gene: <span>Male</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 6.900.000 VND
+                            .pets-showcase__item.layout-products__right__item
+                                .pets-showcase__image
+                                    img(src="./assets/images/image-8.jpg" alt="Pet 8")
+                                .pets-showcase__info
+                                    .pets-showcase__name MO502 - Poodle Tiny Dairy Cow
+                                    .pets-showcase__description
+                                        p Gene: <span>Male</span>
+                                        p Age: <span>02 months</span>
+                                    .pets-showcase__price 5.000.000 VND
+                    // Pagination
+                    .pagination
+                    ul.pagination__list
+                        li.pagination__item
+                            a(href="#" class="pagination__link")
+                                i.fa-solid.fa-arrow-left-long
+                        li.pagination__item
+                            a(href="#" class="pagination__link pagination__link--active") 1
+                        li.pagination__item
+                            a(href="#" class="pagination__link") 2
+                        li.pagination__item
+                            a(href="#" class="pagination__link") 3
+                        li.pagination__item
+                            a(href="#" class="pagination__link") 4
+                        li.pagination__item
+                            a(href="#" class="pagination__link") ...
+                        li.pagination__item
+                            a(href="#" class="pagination__link") 28
+                        li.pagination__item
+                            a(href="#" class="pagination__link")
+                                i.fa-solid.fa-arrow-right-long
