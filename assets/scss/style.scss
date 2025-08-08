@@ -1657,3 +1657,38 @@
     }
   }
 }
+
+/* Breadcrumb */
+.breadcrumb {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 36px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &::after {
+      content: "\f105";
+      font-weight: 900;
+      font-family: "Font Awesome 6 Free", serif;
+      position: absolute;
+      left: calc(100% + 14px);
+      color: $neutral-color-60;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $neutral-color-60;
+    font-weight: 500;
+  }
+}
