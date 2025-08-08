@@ -1,0 +1,17 @@
+extends layouts/default.pug
+
+block title
+    title Category
+block main
+    // Breadcrumb
+    .breadcrumb
+        .container
+            ul.breadcrumb__list
+                li.breadcrumb__item
+                    a(href="index.html" class="breadcrumb__link") Home
+                li.breadcrumb__item
+                    a(href="#" class="breadcrumb__link") Dog
+                li.breadcrumb__item
+                    a(href="#" class="breadcrumb__link") Small Dog
+    // Hero pets section
+    include partials/hero-pets.pug
