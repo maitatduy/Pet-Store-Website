@@ -1692,3 +1692,280 @@
     font-weight: 500;
   }
 }
+
+// Pet products layout section
+.layout-products {
+  padding: 40px 0;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+  }
+
+  &__right {
+    width: 75%;
+
+    &__item {
+      width: calc(100%/3 - 40px/3);
+      margin-right: 20px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 20px;
+      }
+    }
+
+    &-list {
+      padding-top: 0;
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: $dark-blue;
+
+      span {
+        font-size: 14px;
+        color: $neutral-color-60;
+      }
+    }
+
+    &-filter {
+      display: none;
+    }
+
+    &-button {
+      padding: 6px 10px 4px 20px;
+      font-size: 14px;
+      color: $neutral-color-60;
+
+      i {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    &__right {
+      &-main {
+        justify-content: space-between;
+      }
+
+      &__item {
+        width: calc(100%/2 - 40px/2);
+        margin-right: 10px;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    &__left {
+      display: none;
+    }
+
+    &__right {
+      width: 100%;
+
+      &-button {
+        display: block;
+      }
+
+      &-filter {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        color: $dark-blue;
+      }
+
+      &-content {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 424.98px) {
+    &__right {
+
+      &__item {
+        width: calc(100%/2 - 20px/2);
+        margin-right: 0;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+      &-button {
+        font-size: 12px;
+      }
+
+      &-filter {
+        gap: 6px;
+        font-size: 12px;
+
+        i {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}
+
+.filter {
+  &__title {
+    color: $dark-blue;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__item {
+    padding: 16px 0;
+    border-bottom: 1px solid $neutral-color-10;
+
+    &-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: $neutral-color-100;
+      margin-bottom: 10px;
+    }
+
+    &-choose {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      input {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+        border: 1px solid $neutral-color-20;
+      }
+
+      label {
+        font-size: 14px;
+        color: $neutral-color-100;
+      }
+    }
+
+    &-color {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+
+      &--red {
+        background-color: #FF564F;
+      }
+
+      &--apricot {
+        background-color: #FFB672;
+      }
+
+      &--black {
+        background-color: $neutral-color-80;
+      }
+
+      &--black-and-white {
+        background: linear-gradient(90deg, $neutral-color-80 50%, #CECECE 50%);
+      }
+
+      &--silver {
+        background-color: #CECECE;
+      }
+
+      &--tan {
+        background-color: #FFF7CE;
+      }
+    }
+
+    &-box {
+      &--flex {
+        display: flex;
+        gap: 10px;
+      }
+    }
+
+    &-select {
+      border-bottom: 1px solid $neutral-color-10;
+
+      select {
+        padding: 10px;
+        border: none;
+        color: $neutral-color-80;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    &__item {
+      &-box {
+        &--flex {
+          flex-wrap: wrap;
+        }
+      }
+
+      &-select {
+        width: 100%;
+
+        select {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* Pagination */
+.pagination {
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  &__link {
+    color: $dark-blue-80;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 13px 4px 13px;
+
+    &--active {
+      background-color: $dark-blue;
+      color: $neutral-color-0;
+      border-radius: 8px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    &__link {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
