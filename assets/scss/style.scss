@@ -1249,3 +1249,129 @@
     }
   }
 }
+
+/* Knowledge section */
+.knowledge {
+  padding: 60px 0;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+
+    &--left {
+      &__sub-title {
+        font-size: 16px;
+        font-weight: 400;
+        color: #000000;
+        margin-bottom: 2px;
+      }
+
+      &__title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $dark-blue;
+      }
+    }
+
+    &--right {
+      padding: 12px 28px;
+      font-size: 14px;
+      color: $dark-blue;
+      border: 1px solid $dark-blue;
+      border-radius: 57px;
+
+      i {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(100% / 3 - 40px / 3);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 28px -2px rgba(0, 0, 0, 0.2), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      aspect-ratio: 364/243;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 8px;
+  }
+
+  &__sub-topic {
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+    color: #FDFDFD;
+    border-radius: 28px;
+    background-color: #00A7E7;
+    display: inline-flex;
+    padding: 2px 10px;
+  }
+
+  &__topic {
+    margin-top: 10px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00171F;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #242B33;
+    font-weight: 400;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  @media (max-width: 991.98px) {
+    &__wrap {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: calc(100% / 2 - 24px);
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    &__head {
+      &--right {
+        display: none;
+      }
+    }
+
+    &__item {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 424.98px) {
+    &__topic {
+      font-size: 12px;
+    }
+
+    &__description {
+      font-size: 12px;
+    }
+  }
+}
