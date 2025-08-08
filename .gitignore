@@ -34,3 +34,6 @@ yarn.lock
 
 # File biên dịch CSS nếu dùng preprocessor (Sass/Less)
 *.css.map
+
+*.css
+*.html
