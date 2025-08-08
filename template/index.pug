@@ -1,435 +1,343 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-        title Homepage
-        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer")
-        link(rel="stylesheet" href="./assets/css/style.css")
+extends layouts/default.pug
 
-    body
-        // Header
-        header.header
-            .container
-                .header__wrap
-                    button.header__button-menu
-                        i.fa-solid.fa-bars
+block title
+    title Homepage
 
-                    .header__logo
-                        a(href="/")
-                            img(src="./assets/images/logo.png" class="inner-image" alt="Monitor")
+block main
+    // Hero Section
+    section.hero
+        .container
+            .hero__wrap
+                .hero__content
+                    h2.hero__title One more friend
+                    h3.hero__sub-title Thousands more fun!
+                    p.hero__description
+                        | Having a pet means you have more joy, a new friend, a happy person who will always be with you to
+                        | have fun. We have 200+ different pets that can meet your needs!
+                    .hero__button
+                        a(href="#" class="hero__button--left")
+                            | View Intro
+                            i.fa-regular.fa-circle-play
+                        a(href="#" class="hero__button--right")
+                            | Explore Now
+                .hero__images
+                    img(src="./assets/images/hero.png" class="hero__image" alt="Hero Section")
+                    img(src="./assets/images/background-three.svg" class="hero__bg-three" alt="background-three")
+    // Pets showcase section
+    section.pets-showcase
+        .container
+            .pets-showcase__head
+                .pets-showcase__content
+                    h3.pets-showcase__sub-title What's new?
+                    h2.pets-showcase__title Take a look at some of our pets
+                a(href="#" class="pets-showcase__button")
+                    | View more
+                    i.fa-solid.fa-angle-right
+            .pets-showcase__main
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-1.png" alt="Pet 1")
+                    .pets-showcase__info
+                        .pets-showcase__name MO231 - Pomeranian White
+                        .pets-showcase__description
+                            p Gene: <span>Male</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 6.900.000 VND
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-2.jpg" alt="Pet 2")
+                    .pets-showcase__info
+                        .pets-showcase__name MO502 - Poodle Tiny Yellow
+                        .pets-showcase__description
+                            p Gene: <span>Female</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 3.900.000 VND
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-3.jpg" alt="Pet 3")
+                    .pets-showcase__info
+                        .pets-showcase__name MO102 - Poodle Tiny Sepia
+                        .pets-showcase__description
+                            p Gene: <span>Male</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 4.000.000 VND
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-4.jpg" alt="Pet 4")
+                    .pets-showcase__info
+                        .pets-showcase__name MO512 - Alaskan Malamute Grey
+                        .pets-showcase__description
+                            p Gene: <span>Male</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 8.900.000 VND
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-5.jpg" alt="Pet 5")
+                    .pets-showcase__info
+                        .pets-showcase__name MO231 - Pembroke Corgi Tricolor
+                        .pets-showcase__description
+                            p Gene: <span>Female</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 9.000.000 VND
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-6.jpg" alt="Pet 6")
+                    .pets-showcase__info
+                        .pets-showcase__name MO231 - Pomeranian White
+                        .pets-showcase__description
+                            p Gene: <span>Female</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 6.500.000 VND
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-7.jpg" alt="Pet 7")
+                    .pets-showcase__info
+                        .pets-showcase__name MO231 - Pomeranian White
+                        .pets-showcase__description
+                            p Gene: <span>Male</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 6.900.000 VND
+                .pets-showcase__item
+                    .pets-showcase__image
+                        img(src="./assets/images/image-8.jpg" alt="Pet 8")
+                    .pets-showcase__info
+                        .pets-showcase__name MO502 - Poodle Tiny Dairy Cow
+                        .pets-showcase__description
+                            p Gene: <span>Male</span>
+                            p Age: <span>02 months</span>
+                        .pets-showcase__price 5.000.000 VND
+    // Hero pets section
+    section.hero-pets
+        .container
+            .hero-pets__wrap
+                .hero-pets__image
+                    img(src="./assets/images/image-hero-pets.png" alt="hero pets")
+                    img(src="./assets/images/background-five.png" alt="background-five" class="hero-pets__bg-five")
 
-                    nav.header__menu
-                        ul.header__list
-                            li.header__item
-                                a(href="/" class="header__link") Home
-                            li.header__item
-                                a(href="#" class="header__link") Category
-                            li.header__item
-                                a(href="#" class="header__link") About
-                            li.header__item
-                                a(href="#" class="header__link") Contact
+                .hero-pets__content
+                    img(src="./assets/images/background-six.png" alt="background-six" class="hero-pets__bg-six")
+                    h2.hero-pets__title One more friend
+                    h3.hero-pets__sub-title Thousands more fun!
+                    p.hero-pets__description
+                        | Having a pet means you have more joy, a new friend, a happy person who will always be with you to
+                        | have fun. We have 200+ different pets that can meet your needs!
+                    .hero-pets__button
+                        a(href="#" class="hero-pets__button--left")
+                            | View Intro
+                            i.fa-regular.fa-circle-play
 
-                    form(action="" class="header__search")
-                        button
-                            i.fa-solid.fa-magnifying-glass
-                        label
-                            input(type="text" placeholder="Search something here!")
+                        a(href="#" class="hero-pets__button--right") Explore Now
 
-                    a(href="#" class="header__button") Join the community
+    // Pet products section
+    section.pet-products
+        .container
+            .pet-products__head
+                .pet-products__content
+                    h3.pet-products__sub-title Hard to choose right products for your pets?
+                    h2.pet-products__title Our Products
 
-                    .header__language
-                        .header__logo-country
-                            i.fa-solid.fa-star
-                        .header__country VND
+                .pet-products__button
+                    | View more
+                    i.fa-solid.fa-angle-right
+            .pet-products__main
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-1.png" alt="Product 1")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
 
-                        i.fa-solid.fa-angle-down.header__icon--dropdown
+                        .pet-products__price 140.000 VND
 
-                    button.header__button-search
-                        i.fa-solid.fa-magnifying-glass
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-2.png" alt="Product 2")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
 
-        // Hero Section
-        section.hero
-            .container
-                .hero__wrap
-                    .hero__content
-                        h2.hero__title One more friend
-                        h3.hero__sub-title Thousands more fun!
-                        p.hero__description
-                            | Having a pet means you have more joy, a new friend, a happy person who will always be with you to
-                            | have fun. We have 200+ different pets that can meet your needs!
-                        .hero__button
-                            a(href="#" class="hero__button--left")
-                                | View Intro
-                                i.fa-regular.fa-circle-play
-                            a(href="#" class="hero__button--right")
-                                | Explore Now
-                    .hero__images
-                        img(src="./assets/images/hero.png" class="hero__image" alt="Hero Section")
-                        img(src="./assets/images/background-three.svg" class="hero__bg-three" alt="background-three")
+                        .pet-products__price 140.000 VND
 
-        // Pets showcase section
-        section.pets-showcase
-            .container
-                .pets-showcase__head
-                    .pets-showcase__content
-                        h3.pets-showcase__sub-title What's new?
-                        h2.pets-showcase__title Take a look at some of our pets
-                    a(href="#" class="pets-showcase__button")
-                        | View more
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-3.png" alt="Product 3")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
+
+                        .pet-products__price 140.000 VND
+
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-4.png" alt="Product 4")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
+
+                        .pet-products__price 140.000 VND
+
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-5.png" alt="Product 5")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
+
+                        .pet-products__price 140.000 VND
+
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-6.png" alt="Product 6")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
+
+                        .pet-products__price 140.000 VND
+
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-7.png" alt="Product 7")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
+
+                        .pet-products__price 140.000 VND
+
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+                .pet-products__item
+                    .pet-products__image
+                        img(src="./assets/images/product-8.png" alt="Product 8")
+                    .pet-products__info
+                        .pet-products__name Reflex Plus Adult Cat Food Salmon
+                        .pet-products__description
+                            p Product: <span>Dog Food</span>
+                            p Size: <span>385gm</span>
+
+                        .pet-products__price 140.000 VND
+
+                    .pet-products__gif
+                        img(src="./assets/images/gif.png" alt="Gif")
+                        span Free Toy & Free Shaker
+    // Pet sellers section
+    section.pet-sellers
+        .container
+            .pet-sellers__head
+                .pet-sellers__content
+                    | Proud to be part of <span>Pet Sellers</span>
+                .pet-sellers__button
+                    | View all our sellers
+                    i.fa-solid.fa-angle-right
+
+            .pet-sellers__main
+                .pet-sellers__item
+                    img(src="./assets/images/seller-1.png" alt="Seller 1")
+                .pet-sellers__item
+                    img(src="./assets/images/seller-2.png" alt="Seller 2")
+                .pet-sellers__item
+                    img(src="./assets/images/seller-3.png" alt="Seller 3")
+                .pet-sellers__item
+                    img(src="./assets/images/seller-4.png" alt="Seller 4")
+                .pet-sellers__item
+                    img(src="./assets/images/seller-5.png" alt="Seller 5")
+                .pet-sellers__item
+                    img(src="./assets/images/seller-6.png" alt="Seller 6")
+                .pet-sellers__item
+                    img(src="./assets/images/seller-7.png" alt="Seller 7")
+    // Adoption section
+    section.adoption
+        .container
+            .adoption__wrap
+                .adoption__content
+                    img(src="./assets/images/background-seven.png" alt="background-seven" class="adoption__bg-seven")
+                    h2.adoption__title
+                        | Adoption
+                        img(src="./assets/images/icon.png" alt="Icon")
+                    h3.adoption__sub-title We need help. so do they.
+                    p.adoption__description Adopt a pet and give it a home, it will be love you back unconditionally.
+                    .adoption__button
+                        a(href="#" class="adoption__button--left")
+                            | View Intro
+                            i.fa-regular.fa-circle-play
+                        a(href="#" class="adoption__button--right")
+                            | Explore Now
+                .adoption__images
+                    img(src="./assets/images/image-adoption.png" alt="hero adoption pets" class="adoption__image")
+                    img(src="./assets/images/background-eight.png" alt="background-eight" class="adoption__bg-eight")
+
+    // Knowledge Section
+    section.knowledge
+        .container
+            .knowledge__head
+                .knowledge__head--left
+                    h3.knowledge__sub-title You already know ?
+                    h2.knowledge__title Useful pet knowledge
+                .knowledge__head--right
+                    a(href="#" class="knowledge__button")
+                        | View More
                         i.fa-solid.fa-angle-right
-                .pets-showcase__main
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-1.png" alt="Pet 1")
-                        .pets-showcase__info
-                            .pets-showcase__name MO231 - Pomeranian White
-                            .pets-showcase__description
-                                p Gene: <span>Male</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 6.900.000 VND
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-2.jpg" alt="Pet 2")
-                        .pets-showcase__info
-                            .pets-showcase__name MO502 - Poodle Tiny Yellow
-                            .pets-showcase__description
-                                p Gene: <span>Female</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 3.900.000 VND
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-3.jpg" alt="Pet 3")
-                        .pets-showcase__info
-                            .pets-showcase__name MO102 - Poodle Tiny Sepia
-                            .pets-showcase__description
-                                p Gene: <span>Male</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 4.000.000 VND
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-4.jpg" alt="Pet 4")
-                        .pets-showcase__info
-                            .pets-showcase__name MO512 - Alaskan Malamute Grey
-                            .pets-showcase__description
-                                p Gene: <span>Male</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 8.900.000 VND
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-5.jpg" alt="Pet 5")
-                        .pets-showcase__info
-                            .pets-showcase__name MO231 - Pembroke Corgi Tricolor
-                            .pets-showcase__description
-                                p Gene: <span>Female</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 9.000.000 VND
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-6.jpg" alt="Pet 6")
-                        .pets-showcase__info
-                            .pets-showcase__name MO231 - Pomeranian White
-                            .pets-showcase__description
-                                p Gene: <span>Female</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 6.500.000 VND
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-7.jpg" alt="Pet 7")
-                        .pets-showcase__info
-                            .pets-showcase__name MO231 - Pomeranian White
-                            .pets-showcase__description
-                                p Gene: <span>Male</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 6.900.000 VND
-                    .pets-showcase__item
-                        .pets-showcase__image
-                            img(src="./assets/images/image-8.jpg" alt="Pet 8")
-                        .pets-showcase__info
-                            .pets-showcase__name MO502 - Poodle Tiny Dairy Cow
-                            .pets-showcase__description
-                                p Gene: <span>Male</span>
-                                p Age: <span>02 months</span>
-                            .pets-showcase__price 5.000.000 VND
+            .knowledge__wrap
+                .knowledge__item
+                    .knowledge__image
+                        img(src="./assets/images/frame-1.png" alt="Knowledge 1")
+                    .knowledge__content
+                        p.knowledge__sub-topic Pet knowledge
+                        h3.knowledge__topic What is a Pomeranian? How to Identify Pomeranian Dogs
+                        p.knowledge__description
+                            | The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets.
+                            | Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
 
-        section.hero-pets
-            .container
-                .hero-pets__wrap
-                    .hero-pets__image
-                        img(src="./assets/images/image-hero-pets.png" alt="hero pets")
-                        img(src="./assets/images/background-five.png" alt="background-five" class="hero-pets__bg-five")
+                .knowledge__item
+                    .knowledge__image
+                        img(src="./assets/images/frame-2.png" alt="Knowledge 2")
+                    .knowledge__content
+                        p.knowledge__sub-topic Pet knowledge
+                        h3.knowledge__topic Dog Diet You Need To Know
+                        p.knowledge__description
+                            | Dividing a dog's diet may seem simple at first, but there are some rules you should know so that
+                            | your dog can easily absorb the nutrients in the diet. For those who are just starting to raise
+                            | dogs, especially newborn puppies with relatively weak resistance.
 
-                    .hero-pets__content
-                        img(src="./assets/images/background-six.png" alt="background-six" class="hero-pets__bg-six")
-                        h2.hero-pets__title One more friend
-                        h3.hero-pets__sub-title Thousands more fun!
-                        p.hero-pets__description
-                            | Having a pet means you have more joy, a new friend, a happy person who will always be with you to
-                            | have fun. We have 200+ different pets that can meet your needs!
-                        .hero-pets__button
-                            a(href="#" class="hero-pets__button--left")
-                                | View Intro
-                                i.fa-regular.fa-circle-play
-
-                            a(href="#" class="hero-pets__button--right") Explore Now
-
-        // Pet products section
-        section.pet-products
-            .container
-                .pet-products__head
-                    .pet-products__content
-                        h3.pet-products__sub-title Hard to choose right products for your pets?
-                        h2.pet-products__title Our Products
-
-                    .pet-products__button
-                        | View more
-                        i.fa-solid.fa-angle-right
-                .pet-products__main
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-1.png" alt="Product 1")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-2.png" alt="Product 2")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-3.png" alt="Product 3")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-4.png" alt="Product 4")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-5.png" alt="Product 5")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-6.png" alt="Product 6")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-7.png" alt="Product 7")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-                    .pet-products__item
-                        .pet-products__image
-                            img(src="./assets/images/product-8.png" alt="Product 8")
-                        .pet-products__info
-                            .pet-products__name Reflex Plus Adult Cat Food Salmon
-                            .pet-products__description
-                                p Product: <span>Dog Food</span>
-                                p Size: <span>385gm</span>
-
-                            .pet-products__price 140.000 VND
-
-                        .pet-products__gif
-                            img(src="./assets/images/gif.png" alt="Gif")
-                            span Free Toy & Free Shaker
-        // Pet sellers section
-        section.pet-sellers
-            .container
-                .pet-sellers__head
-                    .pet-sellers__content
-                        | Proud to be part of <span>Pet Sellers</span>
-                    .pet-sellers__button
-                        | View all our sellers
-                        i.fa-solid.fa-angle-right
-
-                .pet-sellers__main
-                    .pet-sellers__item
-                        img(src="./assets/images/seller-1.png" alt="Seller 1")
-                    .pet-sellers__item
-                        img(src="./assets/images/seller-2.png" alt="Seller 2")
-                    .pet-sellers__item
-                        img(src="./assets/images/seller-3.png" alt="Seller 3")
-                    .pet-sellers__item
-                        img(src="./assets/images/seller-4.png" alt="Seller 4")
-                    .pet-sellers__item
-                        img(src="./assets/images/seller-5.png" alt="Seller 5")
-                    .pet-sellers__item
-                        img(src="./assets/images/seller-6.png" alt="Seller 6")
-                    .pet-sellers__item
-                        img(src="./assets/images/seller-7.png" alt="Seller 7")
-        // Adoption section
-        section.adoption
-            .container
-                .adoption__wrap
-                    .adoption__content
-                        img(src="./assets/images/background-seven.png" alt="background-seven" class="adoption__bg-seven")
-                        h2.adoption__title
-                            | Adoption
-                            img(src="./assets/images/icon.png" alt="Icon")
-                        h3.adoption__sub-title We need help. so do they.
-                        p.adoption__description Adopt a pet and give it a home, it will be love you back unconditionally.
-                        .adoption__button
-                            a(href="#" class="adoption__button--left")
-                                | View Intro
-                                i.fa-regular.fa-circle-play
-                            a(href="#" class="adoption__button--right")
-                                | Explore Now
-                    .adoption__images
-                        img(src="./assets/images/image-adoption.png" alt="hero adoption pets" class="adoption__image")
-                        img(src="./assets/images/background-eight.png" alt="background-eight" class="adoption__bg-eight")
-
-        // Knowledge Section
-        section.knowledge
-            .container
-                .knowledge__head
-                    .knowledge__head--left
-                        h3.knowledge__sub-title You already know ?
-                        h2.knowledge__title Useful pet knowledge
-                    .knowledge__head--right
-                        a(href="#" class="knowledge__button")
-                            | View More
-                            i.fa-solid.fa-angle-right
-                .knowledge__wrap
-                    .knowledge__item
-                        .knowledge__image
-                            img(src="./assets/images/frame-1.png" alt="Knowledge 1")
-                        .knowledge__content
-                            p.knowledge__sub-topic Pet knowledge
-                            h3.knowledge__topic What is a Pomeranian? How to Identify Pomeranian Dogs
-                            p.knowledge__description
-                                | The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets.
-                                | Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.
-
-                    .knowledge__item
-                        .knowledge__image
-                            img(src="./assets/images/frame-2.png" alt="Knowledge 2")
-                        .knowledge__content
-                            p.knowledge__sub-topic Pet knowledge
-                            h3.knowledge__topic Dog Diet You Need To Know
-                            p.knowledge__description
-                                | Dividing a dog's diet may seem simple at first, but there are some rules you should know so that
-                                | your dog can easily absorb the nutrients in the diet. For those who are just starting to raise
-                                | dogs, especially newborn puppies with relatively weak resistance.
-
-                    .knowledge__item
-                        .knowledge__image
-                            img(src="./assets/images/frame-3.png" alt="Knowledge 3")
-                        .knowledge__content
-                            p.knowledge__sub-topic Pet knowledge
-                            h3.knowledge__topic Why Dogs Bite and Destroy Furniture and How to Prevent It Effectively
-                            p.knowledge__description
-                                | Dog bites are common during development. However, no one wants to see their furniture or
-                                | important items being bitten by a dog.
-        // Footer
-        footer.footer
-            .container
-                .footer__top
-                    h3.footer__title Register now so you don't miss our programs
-                    form(class="footer__form" action="#")
-                        input(type="email" placeholder="Enter your email...")
-                        button(type="submit") Subcribe Now
-                .footer__middle
-                    .footer__menu
-                        ul.footer__list
-                            li.footer__item
-                                a(href="/" class="footer__link") Home
-                            li.footer__item
-                                a(href="#" class="footer__link") Category
-                            li.footer__item
-                                a(href="#" class="footer__link") About
-                            li.footer__item
-                                a(href="#" class="footer__link") Contact
-                    .footer__social
-                        ul.footer__list
-                            li.footer__item
-                                a(href="/" class="footer__link")
-                                    i.fa-brands.fa-facebook
-                            li.footer__item
-                                a(href="#" class="footer__link")
-                                    i.fa-brands.fa-twitter
-                            li.footer__item
-                                a(href="#" class="footer__link")
-                                    i.fa-brands.fa-instagram
-                            li.footer__item
-                                a(href="#" class="footer__link")
-                                    i.fa-brands.fa-youtube
-                .footer__bottom
-                    .footer__copyright
-                        | © 2022 Monito. All rights reserved.
-                    .footer__logo
-                        a(href="/")
-                            img(src="./assets/images/logo.png" alt="Monitor")
-                    .footer__links
-                        ul.footer__list
-                            li.footer__item
-                                a(href="#" class="footer__link") Terms of Service
-                            li.footer__item
-                                a(href="#" class="footer__link") Privacy Policy
+                .knowledge__item
+                    .knowledge__image
+                        img(src="./assets/images/frame-3.png" alt="Knowledge 3")
+                    .knowledge__content
+                        p.knowledge__sub-topic Pet knowledge
+                        h3.knowledge__topic Why Dogs Bite and Destroy Furniture and How to Prevent It Effectively
+                        p.knowledge__description
+                            | Dog bites are common during development. However, no one wants to see their furniture or
+                            | important items being bitten by a dog.
